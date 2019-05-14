@@ -56,11 +56,10 @@ section { background-color: #FFF;  color: #777777; }
 /*========= titulos ===============*/
 
 .sec-title { 
-	display: 
-	flex; color: #4a65e8;  
-	align-self: center; 
+	display:	flex; 
+	color: #4a65e8;   
 	font-weight: 300; 
-	padding: 2.5% 0;
+	padding: 2% 0;
 	width: 100%;
  	align-items: center; 
  	justify-content: center;
