@@ -61,6 +61,7 @@ section { background-color: #FFF;  color: #777777; }
 	font-weight: 300; 
 	padding: 2% 0;
 	width: 100%;
+	align-self: center;
  	align-items: center; 
  	justify-content: center;
  	align-content: center;
@@ -127,8 +128,19 @@ span.green {  background:  linear-gradient(to right,#00CABB, #6379EB); }
 
 /* listas complementares*/
 .lista-comp li{ 
-min-width:100%; color: #FFF; padding: 1rem; border-radius: 30px;  margin: .5% 0;
-display: flex; align-items: center; align-content: center; text-align: center; justify-content: center; height: 30px; line-height: 90%;}
+min-width:100%; 
+color: #FFF; 
+padding: 1rem; 
+border-radius: 30px;  
+margin: .5% 0;
+display: flex; 
+align-items: center; 
+align-content: center; 
+text-align: center; 
+justify-content: center; 
+height: 30px; 
+line-height: 90%;
+}
 
 
 .lista-comp > li:nth-child(1) {	
@@ -194,7 +206,7 @@ transparent
 	.atv i, .fa-briefcase, .escolaridade i {left: -1.55%;
 	}
 	.ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
-	 }
+	}
 
 }
 @media screen and (min-width: 1024px){
@@ -210,7 +222,7 @@ transparent
 	.atv i, .fa-briefcase, .escolaridade i {left: -2.0%; padding:  2.5% 0;
 	}
 	 .ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
-	 }
+	}
 
 
 }
