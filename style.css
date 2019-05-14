@@ -66,7 +66,7 @@ section { background-color: #FFF;  color: #777777; }
  	align-content: center;
  	flex-wrap: nowrap;
  }
-.sec-title i { padding: 0 5%; min-width: 10%;}
+.sec-title i { padding: 0 5%; flex-basis: 10%; flex: 1;}
 
 /*========= tópicos ===============*/
 
