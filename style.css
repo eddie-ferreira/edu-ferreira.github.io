@@ -55,8 +55,15 @@ section { background-color: #FFF;  color: #777777; }
 
 /*========= titulos ===============*/
 
-.sec-title {display: flex; color: #4a65e8;  align-self: center; font-weight: 300; padding: 2.5% 0; width: 100%; align-items: center; justify-content: center;}
-.sec-title i { padding: 0 5%;}
+.sec-title { 
+	display: flex; color: #4a65e8;  
+	align-self: center; font-weight: 300; 
+	padding: 2.5% 0; 
+ 	align-items: center; 
+ 	justify-content: center;
+ 	align-content: center;
+ }
+.sec-title i { padding: 0 2.5%; min-width: 10%;}
 
 /*========= tópicos ===============*/
 
