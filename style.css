@@ -3,16 +3,16 @@
 * {	 box-sizing: border-box; margin: 0; padding: 0; font-size: 1rem;font-family: 'Muli', sans-serif;
 
 }
-.iframe-controls-right,.ui_dialog_lock, script, iframe, head { display: none!important;}
+.iframe-controls-right,.ui_dialog_lock, script, iframe, head { display: none!important; }
 
-h2 	{	font-size: 1.7em;		}
-h3 	{	font-size: 1.5em;		}
-h4 	{	font-size: 1.2em;		}
-p 	{	text-align: left;       }
-img {	max-width: 100%; 		}
-ul {    list-style: none;       }
+h2 	{	font-size: 1.7em;	}
+h3 	{	font-size: 1.5em;	}
+h4 	{	font-size: 1.2em;	}
+p 	{	text-align: left;   }
+img {	max-width: 100%; 	}
+ul  {   list-style: none;	}
 
-header, section { width: 100%;  overflow-x:hidden;}
+header, section { width: 100%;  overflow-x: hidden; }
 html, body { min-width: 320px; display: flex;}
 body{ background-color: #F1F1F1; display: flex;	 flex-direction: column; overflow-x:hidden;}
 
@@ -24,6 +24,7 @@ body{ background-color: #F1F1F1; display: flex;	 flex-direction: column; overflo
 
 
 /*============================= cabeçalho =========================================*/
+
 header {display: flex;	z-index: 1; border-radius: 7px;	 padding: 1%;
 	box-shadow:  0 5px 15px rgba(0,0,0,0.5); 
 	color: #FFF;
@@ -33,16 +34,16 @@ header {display: flex;	z-index: 1; border-radius: 7px;	 padding: 1%;
 header .picture {padding-right: 2%; flex: 1 2 auto;}
 header .user-img { 
  width: 116px; height: 116.63px; border-radius: 50%;
- background-image: linear-gradient(45deg,rgba(0, 202, 187,0.5)1%, rgba(99, 121, 235,0.5)50%), url("https://drive.google.com/uc?id=1gO6eCCTuQ-d72IM4POmgDVk9han5UNqt");
+ background-image: linear-gradient(45deg,rgba(0, 202, 187,0.5)1%, rgba(99, 121, 235,0.5)50%), 
+ url("https://drive.google.com/uc?id=1gO6eCCTuQ-d72IM4POmgDVk9han5UNqt");
  background-size: cover; align-self: center;
 }
 
 header .nome { padding: 1% 0; }
-header .ctto >li {align-items: center;}
+header .ctto >li { align-items: center;}
 header .cep, .mail-txt, .cel-txt {display: none;}
 header .fas, header .fab {padding: 10px; font-size: 1.33em;}
 .mail, .mobile, .adress { flex-flow: row nowrap; justify-content: flex-start;}
-
 
 /*====================================== section ==================================*/
 
@@ -55,7 +56,7 @@ section { background-color: #FFF;  color: #777777; }
 /*========= titulos ===============*/
 
 .sec-title {display: flex; color: #4a65e8;  align-self: center; font-weight: 300; padding: 2.5% 0; width: 100%; align-items: center; justify-content: center;}
-.sec-title i { width:10%;}
+.sec-title i { padding: 0 5%;}
 
 /*========= tópicos ===============*/
 
@@ -142,7 +143,7 @@ display: flex; align-items: center; align-content: center; text-align: center; j
 	background: linear-gradient(45deg,#00cc99,  #00e6b8);
 }
 .lista-comp > li:nth-child(5){
-	background: linear-gradient(45deg,  #293d3d, #00e6b8);
+	background: linear-gradient(45deg, #00e6b8, #00CABB);
 }
 
 
@@ -173,36 +174,53 @@ transparent
 }
 
 
+@media screen and (min-width: 998px){
 
+	body { width: 90%; margin: 0 5%;
+	}
+	header .user-img {  width: 132.23px; height: 132.23px; 
+	}
+	.lista-comp li {min-width: 49%; margin: .5%;
+	}
+	.atv i, .fa-briefcase, .escolaridade i {left: -1.55%;
+	}
+	.ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
+	 }
+
+}
 @media screen and (min-width: 1024px){
-body { width:80%; margin: 0 10%;
-}
-header .cep, .mail-txt, .cel-txt {display: flex;
-}
-header .user-img {  width: 152.63px; height: 152.63px; 
-}
-.lista-comp li {min-width: 29.5%; margin: .5%;
-}
-.atv i, .fa-briefcase, .escolaridade i {left: -2.0%; padding:  2.5% 0;
-}
- .ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
- }
+
+	body { width:80%; margin: 0 10%;
+	}
+	header .cep, .mail-txt, .cel-txt {display: flex;
+	}
+	header .user-img {  width: 152.63px; height: 152.63px; 
+	}
+	.lista-comp li {min-width: 29.5%; margin: .5%;
+	}
+	.atv i, .fa-briefcase, .escolaridade i {left: -2.0%; padding:  2.5% 0;
+	}
+	 .ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
+	 }
 
 
 }
 @media screen and (min-width: 1280px){
-    body {
-        width:60%; margin: 0 20%;
-    }
-    .sec-title{width: 40%; margin: 2.5% 30%; padding: 2.5% 0;}
-    .atv i, .fa-briefcase {left: -2.15%;}
-    .fa-briefcase {top:0%; padding: 4% 0;}
-    
-    .ult-xp, .penul-xp, .cursos { margin-top: 1%;}
-header .cep, .mail-txt, .cel-txt {display: flex;}
-header .user-img { 
- width: 192.63px; height: 192.63px;
-    
+	body {
+		width:60%; margin: 0 20%;
+	}
+	.sec-title{ margin: 2.5%;
+	}
+	.atv i, .fa-briefcase {left: -2.15%;
+	}
+	.fa-briefcase {top:0%; padding: 4% 0;
+	}	
+	.ult-xp, .penul-xp, .cursos { margin-top: 1%;
+	}
+	header .cep, .mail-txt, .cel-txt {display: flex;
+	}
+	header .user-img { width: 192.63px; height: 192.63px;
+	}
+	.lista-comp li { min-width: 20%; margin: .5%; 
+	}
 }
-.lista-comp li {min-width: 29.5%; margin: .5%;}
- }
