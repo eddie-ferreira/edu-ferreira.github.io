@@ -101,7 +101,7 @@ section { background-color: #FFF;  color: #777777; }
 
 .meter {	height: 30px;	width: 100%;	background: #CFCFCF;	border-radius: 30px;  color: #333; display: flex; }
 .meter > span { display: flex; height: 100%;  border-radius:30px; justify-content: center; align-items: center; align-content: center; }
-.meter >  span p.bold { color:rgba(255,255,255,.7);}
+.meter >  span p.bold { display: none; color:rgba(255,255,255,.7);}
 span.green {  background:  linear-gradient(to right,#00CABB, #6379EB); }
 @keyframes move { from { width:0%;}  to { width:;} } 
 

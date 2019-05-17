@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HOME</title>
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		.flex {
+			display: flex;
+		}
+		body {		
+			width: 100vw;
+			height: 100vh;
+
+		}
+		img {
+			max-width: 100%;
+			max-height: 100%;
+
+		}
+		header{
+			flex: 1;
+		}
+
+			header .foto {
+
+			border-radius: 0 90% 90% 0;			
+			transition: all 1s ease;
+			background-image: linear-gradient(45deg,rgba(0, 202, 187,0.5)1%, rgba(99, 121, 235,0.5)50%), url("https://drive.google.com/uc?id=1gO6eCCTuQ-d72IM4POmgDVk9han5UNqt");
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 30vw;
+			height: 100%;
+
+
+		}
+		picture {
+			position: relative;
+		}
+
+	
+		picture:hover .foto {
+		 border-radius: 0;
+		}
+		
+	</style>
+</head>
+<body class="flex">
+	<section class="flex">
+		<header class="flex">
+			<picture>
+				<div class="foto">
+				</div>
+			</picture>			
+		</header>	
+		<main>
+			
+		</main>
+	</section>
+
+</body>
+</html>
