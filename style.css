@@ -215,7 +215,7 @@ footer p {
 
 @media screen and (min-width: 1250px) {
 
-	.slide-item:nth-child(3) {
+	.slide-item:nth-child(4) {
 		display: flex;
 	}
 
