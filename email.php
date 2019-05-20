@@ -12,7 +12,7 @@ $subject = "Contato - Página Github";
 
 $body = "Nome: ".$nome."\n"."Email: ".$email."\n"."Mensagem: ".$mensagem;
 
-$header = "From: eddy.fryends@gmail.com"."\r\n"."Reply-To:".$email."\r\n"."x-mailer:PHP/".hpversion();
+$header = "From: eddy.fryends@gmail.com"."\r\n"."Reply-To:".$email."\r\n"."x-mailer:PHP/".phpversion();
 
 if(mail($to,$subject,$body,$header)){
 	echo("E-mail enviado com sucesso!");
