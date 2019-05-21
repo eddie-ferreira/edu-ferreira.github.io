@@ -170,14 +170,61 @@ line-height: 90%;
 /* =================================flutuante ======================================*/
 
 #menuflutuante {
-	position: absolute;
-	top:calc(100vh - 30px);
-	left:calc(100vw - 30px);
+	position: fixed;
+	align-items: center;
+	bottom: 5%;
+	right: 5%;
 	z-index: 999;
-	max-width: 96px;
+	width: 100%;
+	height: auto;
+	background: rgba(0,0,0,0);
+	align-items: flex-end;
+	flex-flow: column-reverse;
+}
+.float-item{
+	position: relative;
+	background: #fff;
+	width: 60px;
+	height: 60px;
+	margin: 5px;
+	padding: 5px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 9px rgba(0,0,0,0.3);  
+
 	
 
 }
+.float-item:before{
+	font-size: .9rem;
+	color: #333;
+	padding: 5px;
+	background-color: rgba(255,255,255,.6);
+	font-weight: 700;
+	position: absolute;
+	top:15%;
+	width: 100%;
+	text-align: center;
+	display: none;
+	transform: translateX(-90px);
+	border-radius: 15px;
+
+
+}
+.float-item:hover:before {
+	display: flex;
+}
+.pdf:before {
+	content: "Download em pdf";
+}
+.casa:before {
+	content: "Voltar pra casa";
+}
+.float-item a img {
+	align-self: center;
+	width: 100%;
+}
+
+
 
 
 /* ============= scrollbar ============== */
