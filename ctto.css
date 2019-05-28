@@ -18,7 +18,7 @@ body, html {
 	width: 100vw;
 	height: 300vh;
 	flex-flow: column nowrap;
-	overflow-x: hidden;
+	overflow: hidden;
 	background-color: #00CABB;
 }
 body {
@@ -30,16 +30,10 @@ body {
 }
 header,footer, section {
 height: 100vh;
-width: 100vw;
-	
+width: 100vw;	
 
 }
-header{
-	background-color: #FFDD40;
-}
-footer {
-	background-color:  #4a65e8;
-}
+
 header div.bg, footer div.bg {
 
 	background-position: 50% 50%;
@@ -49,8 +43,8 @@ header div.bg, footer div.bg {
 	width: 100%;
 	height: 100%;
 }
-header .bg {
-	background-image: linear-gradient(120deg,rgba(255,221,64,.3), rgba(255,221,64,1) 85%);
+header div.bg{
+	background-image: linear-gradient(120deg,rgba(255,221,64,.3), rgba(255,221,64,.9) 90%);
 
 }
 
@@ -59,37 +53,50 @@ header .menu {
 	position: fixed;
 	bottom: 0;
 	right: 0;
+	height: 100%;
 	flex-direction: column;
-	justify-content: flex-end;
-	align-items: flex-end;
 	padding: 3.5%;
 	z-index: 3;
+	align-content: center;
+	justify-content: flex-end;
 }
 header .menu .btnMenu {
-	opacity: .7;
 	width: 50px;
 	height: 50px;
 	border-radius: 50px;
 	cursor: pointer;
 	margin-top: 5px;
-
 }
 
 header .menu .btnMenu:nth-child(1) {
-	background-color: #FFDD40;
-
+	background: linear-gradient(120deg,rgba(255,221,64,.2), rgba(255,221,64,.9));
+	
 }
 header .menu .btnMenu:nth-child(2) {
 	background-color: #00CABB;
 
 }
 header .menu .btnMenu:nth-child(3) {
-	background-color: #4a65e8;
+	background-color: rgba(74,101,232,.9);
 }
-header .menu .btnMenu::hover {
-	width: 100vw;
-	height: 100vh;
+header .menu .home {
+	background-size: contain;
+	position: fixed;
+	color: rgba(255,255,255,1);
+	background-color: #3c3c3c;
+	top:0;
+	font-size: 2.4rem;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
+
+
+
+
+
 header div.titulo {
 	width: 100%;
 	align-self: center;
@@ -214,10 +221,49 @@ outline: none;
 	background-color: rgba(0,0,0,0);
 }
 
-footer div.bg {
+footer {
+	justify-content: center;
+	align-items: center;
+	background-image: linear-gradient(150deg,rgba(74,101,232,.3), rgba(74,101,232,.9) 90%);
+	max-height: 100vh;
+}
+footer ul.social {
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	align-self: center;
+	color: rgba(255,255,255,.7);
+	flex-direction: column;
+	padding: 2.5%;
+	height: 50%;
+	font-size: 1.5rem;
 	
-	background-image: linear-gradient(150deg,rgba(74,101,232,.3), rgba(74,101,232,1) 90%),
-	url("bgctto.jpg");
+
+}
+li.social-net {
+	width: 100%;
+	padding: 5% 2.5%;
+	flex:1;
+	flex-flow: row nowrap;
+	letter-spacing: 1.5px;
+	border: 1.5px solid rgba(0,0,0,0);
+	border-radius: 35px;
+	font-size: 1.5rem;
+	align-items: center;
+	align-content: center;
+	justify-content: flex-start;
+}
+li.social-net:hover {
+	color: #FFF;
+	border-color: #FFF;
+}
+li.social-net i {
+	padding: 0 5%;
+	font-size: 1.5em;
+}
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
 
