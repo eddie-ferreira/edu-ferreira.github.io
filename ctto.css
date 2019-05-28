@@ -7,6 +7,7 @@
 
 
 }
+
 a {
 	cursor: pointer;
 }
@@ -20,7 +21,7 @@ body, html {
 	overflow: hidden;
 }
 body {
-	background-image: url("bgctto.jpg");
+	background-image:
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -42,8 +43,9 @@ header div.bg, footer div.bg {
 	height: 100%;
 }
 header div.bg{
-	background-image: linear-gradient(120deg,rgba(255,221,64,.3), rgba(255,221,64,.9) 90%);
-
+	background-image: 
+	linear-gradient(120deg,rgba(255,221,64,.3), rgba(255,221,64,.9) 90%),  
+	url("bgctto.jpg");
 }
 
 
@@ -67,7 +69,7 @@ header .menu .btnMenu {
 }
 
 header .menu .btnMenu:nth-child(1) {
-	background: linear-gradient(120deg,rgba(255,221,64,.2), rgba(255,221,64,.9));
+	background-image: linear-gradient(120deg,rgba(255,221,64,.2), rgba(255,221,64,.9));
 	
 }
 header .menu .btnMenu:nth-child(2) {
@@ -80,14 +82,15 @@ header .menu .btnMenu:nth-child(3) {
 header .menu .home {
 	background-size: contain;
 	position: fixed;
-	color: rgba(255,255,255,1);
-	background-color: #3c3c3c;
+	color: #fff;
+	background-color:#FF4848;
 	top:0;
 	font-size: 2.4rem;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: inset 0 0 15px 0 rgba(0,0,0,.4);
 
 }
 
@@ -222,7 +225,8 @@ outline: none;
 footer {
 	justify-content: center;
 	align-items: center;
-	background-image: linear-gradient(150deg,rgba(74,101,232,.3), rgba(74,101,232,.9) 90%);
+	background-image: linear-gradient(150deg,rgba(74,101,232,.3), rgba(74,101,232,.9) 90%),  
+	url("bgctto.jpg");
 	max-height: 100vh;
 }
 footer ul.social {
