@@ -33,16 +33,13 @@ width: 100vw;
 
 }
 
-header div.bg, footer div.bg {
-
+header, footer {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
-	width: 100%;
-	height: 100%;
 }
-header div.bg{
+header{
 	background-image: 
 	linear-gradient(120deg,rgba(255,221,64,.3), rgba(255,221,64,.9) 90%),  
 	url("bgctto.jpg");
@@ -227,7 +224,7 @@ footer {
 	align-items: center;
 	background-image: linear-gradient(150deg,rgba(74,101,232,.3), rgba(74,101,232,.9) 90%),  
 	url("bgctto.jpg");
-	max-height: 100vh;
+
 }
 footer ul.social {
 	align-items: center;
