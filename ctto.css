@@ -313,7 +313,7 @@ section {
 
 }
 
-@media screen and (min-width: 1360px) {
+@media screen and (min-width: 1280px) {
 	section {
 			padding: 25%;
 			background-size: contain;
