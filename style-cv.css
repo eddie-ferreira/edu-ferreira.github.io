@@ -42,6 +42,7 @@ header {
 	 overflow: visible;
 	 padding: 1px;
 
+
 }
 
 header .box {	
@@ -50,7 +51,10 @@ header .box {
 	flex-wrap: nowrap;
 	align-items: center;
 	justify-content: space-around; 
-z-index: 3;	background:	linear-gradient(45deg,#00CABB, #4a65e8); 
+	z-index: 3;	
+	background-image:url('banner.svg'), linear-gradient(45deg,#00CABB, #4a65e8);
+	background-size: cover;
+	text-shadow: 1px s
 }
 
 /*
@@ -458,11 +462,17 @@ DISPOSITIVO MINIMO WIDTH 320 PX ================================================
 		span.abrev {
 		display: none;
 	}
-	.ctto, .ctto > li {
+	.picture {
+		width: auto;
+		padding: 0;
+	}
+	.ctto, .ctto > li, header .user-img {
 		align-content: center;
 		align-items: center;
+		align-self: center;
 		justify-content: center;
 		text-align: center;
+		padding: 0;
 	}
 }
 
