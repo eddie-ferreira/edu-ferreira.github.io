@@ -458,6 +458,12 @@ DISPOSITIVO MINIMO WIDTH 320 PX ================================================
 		span.abrev {
 		display: none;
 	}
+	.ctto, .ctto > li {
+		align-content: center;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
 }
 
 /* DISPOSITIVO MINIMO WIDTH 425 PX ==================================================================
@@ -474,6 +480,11 @@ DISPOSITIVO MINIMO WIDTH 320 PX ================================================
 	}
 	.nome h2 {
 		font-size: 1.5rem;
+	}
+	.ctto, .ctto > li {
+		text-align: left;
+		align-items: flex-start;
+		justify-content: flex-start;
 	}
 
 }
