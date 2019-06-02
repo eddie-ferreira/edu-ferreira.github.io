@@ -35,12 +35,14 @@ body{ flex-direction: column; overflow-x:hidden;}
 
 header {
 	display: flex;
-	color: #FFF;
+	color: rgba(255,255,255,0);
 	align-items: center;
 	position: relative;
 	z-index: 2;
 	 overflow: visible;
 	 padding: 1px;
+	 text-shadow: 2px 2px 1px #000;
+
 
 
 }
@@ -54,7 +56,7 @@ header .box {
 	z-index: 3;	
 	background-image:url('banner.svg'), linear-gradient(45deg,#00CABB, #4a65e8);
 	background-size: cover;
-	text-shadow: 1px s
+	
 }
 
 /*
@@ -112,7 +114,7 @@ header .user-img {
  width: 116px; height: 116.63px; border-radius: 50%;
  background-image:  
  url("portrait.png");
- box-shadow: inset 5px 5px 15px 5px rgba(0,0,0,0.8);
+ box-shadow: inset 5px 5px 15px 8px rgba(0,0,0,0.8);
  background-size: cover; align-self: center;
 }
 
@@ -126,8 +128,9 @@ DADOS GERAIS E DE CONTATO ======================================================
 //
 /
 */
+
 header .nome {width: 100%; flex: 1; align-self: center;}
-header .ctto >li { align-items: center;}
+header .ctto >li { align-items: center; font-weight: 700; }
 header .cep, .mail-txt, .cel-txt {display: none;}
 header .fas, header .fab {padding: 10px; font-size: 1.33em;}
 .mail, .mobile, .adress { flex-flow: row nowrap; justify-content: flex-start;}
@@ -491,9 +494,10 @@ DISPOSITIVO MINIMO WIDTH 320 PX ================================================
 	.nome h2 {
 		font-size: 1.5rem;
 	}
+
 	.ctto, .ctto > li {
+		flex:1;
 		text-align: left;
-		align-items: flex-start;
 		justify-content: flex-start;
 	}
 
@@ -508,6 +512,13 @@ DISPOSITIVO MINIMO WIDTH 320 PX ================================================
 	}
 	.nome h2 {
 		font-size: 1.7rem;
+	}
+		.info{
+		width: 50%;
+		align-content: flex-start;
+		justify-content: flex-start;
+		align-items: flex-start;
+
 	}
 
 }
@@ -532,6 +543,9 @@ DISPOSITIVO MINIMO WIDTH 998 PX ================================================
 	.atv i, .fa-briefcase, .escolaridade i {left: -1.55%;
 	}
 	.ult-xp, .penul-xp, .cursos { margin-top:  2%; width: 80%; align-self: center;
+	}
+		.info{
+		width: 60%;
 	}
 
 }
