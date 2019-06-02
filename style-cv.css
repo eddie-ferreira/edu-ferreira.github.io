@@ -1,4 +1,9 @@
-/*============================= RESET =========================================*/
+/*
+========================================================== 
+=========================== RESET ========================
+==========================================================
+ */
+
 
 * {	 box-sizing: border-box; margin: 0; padding: 0; font-size: 1rem;font-family: 'Muli', sans-serif;
 }
@@ -22,37 +27,131 @@ body{ flex-direction: column; overflow-x:hidden;}
 
 
 
-/*============================= cabeçalho =========================================*/
+/*
+========================================================== 
+======================= CABECALHO ========================
+==========================================================
+ */
 
-header {display: flex;	z-index: 1; border-radius: 7px;	 padding: 1%;
-	box-shadow:  0 5px 15px rgba(0,0,0,0.5); 
+header {
+	display: flex;
 	color: #FFF;
-	background:linear-gradient(45deg,#00CABB, #4a65e8); 
 	align-items: center;
+	position: relative;
+	z-index: 2;
+	 overflow: visible;
+	 padding: 1px;
+
 }
-header .picture {padding-right: 2%; flex: 1 2 auto;}
+
+header .box {	
+	width: 100%;
+	padding: 2.5%; 
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-around; 
+z-index: 3;	background:	linear-gradient(45deg,#00CABB, #4a65e8); 
+}
+
+/*
+//
+//
+/
+EFEITO BOX SHADOW ==================================================================
+//
+//
+/
+*/
+
+header:before, header:after
+{
+
+  content:"";
+  position:absolute;
+  width:48.1%;
+  background: rgba(0,0,0,0);
+
+
+  height:20px;
+  box-shadow:0 15px 5px 5px rgba(0,0,0, 0.6);
+
+  bottom:10px;
+  left:10px;
+}
+header:before{
+  right:10px;
+  left:auto;
+  -webkit-transform:rotate(2deg);
+  -moz-transform:rotate(2deg);
+  	background:	linear-gradient(45deg,#00CABB, #4a65e8);
+
+}
+header:after{
+  -webkit-transform:rotate(-2deg);
+  -moz-transform:rotate(-2deg);
+  	background:	linear-gradient(45deg,#00CABB, #4a65e8);
+}
+
+
+/*
+//
+//
+/
+IMAGEM PERFIL ==================================================================
+//
+//
+/
+*/
+
+header .picture {padding-right: 2%; flex: 1 2 auto; }
 header .user-img { 
  width: 116px; height: 116.63px; border-radius: 50%;
- background-image: linear-gradient(45deg,rgba(0, 202, 187,0.5)1%, rgba(99, 121, 235,0.5)50%), 
+ background-image:  
  url("portrait.png");
+ box-shadow: inset 5px 5px 15px 5px rgba(0,0,0,0.8);
  background-size: cover; align-self: center;
 }
 
-header .nome { padding: 1% 0; }
+
+/*
+//
+//
+/
+DADOS GERAIS E DE CONTATO ==================================================================
+//
+//
+/
+*/
+header .nome {width: 100%; flex: 1; align-self: center;}
 header .ctto >li { align-items: center;}
 header .cep, .mail-txt, .cel-txt {display: none;}
 header .fas, header .fab {padding: 10px; font-size: 1.33em;}
 .mail, .mobile, .adress { flex-flow: row nowrap; justify-content: flex-start;}
 
-/*====================================== section ==================================*/
 
-section { background-color: #FFF;  color: #777777; }
+/*
+========================================================== 
+======================= SECTIONS  ========================
+==========================================================
+ */
+
+
+
+section { background-color: #FFF;  color: #777777;  padding-top: 1.5%;}
 
 .ctg { padding: 1% 3%; }
 .ctg > li, .topicos {padding-top: 1.5%;}
 
 
-/*========= titulos ===============*/
+/*
+//
+//
+/
+TITULOS  ==================================================================
+//
+//
+/
+*/
 
 .sec-title { 
 	display:	flex; 
@@ -67,36 +166,77 @@ section { background-color: #FFF;  color: #777777; }
  }
 .sec-title i { width: 10%;}
 
-/*========= tópicos ===============*/
+/*
+//
+//
+/
+TÓPICOS  ==================================================================
+//
+//
+/
+*/
 
 .topicos {border-bottom: 1px solid rgba(0,0,0,0.2);  padding-bottom: 1.5%; display: flex; padding-top: 3.5%; align-items: flex-start;}
 .topicos i {color: #00CABB; font-size: 2rem; opacity:.6; width: 10%;}
 .topicos  h3 { text-align: center; align-self: center;}
 .ctg-txt { padding-left: 2%; }
 
-/*== Container borda para os icones ===*/
-
+/*
+//
+//
+/
+CONTAINER BORDA ICONES ==================================================================
+//
+//
+/
+*/
 .ult-xp, .penul-xp, .cursos, .escolaridade { border-left: 3px solid rgba(0,0,0,0.1); margin-top: 7%;margin-left:5%; padding-left: 7%;position:relative;}
 
-
-
-/*== Escolaridade ===*/
+/*
+//
+//
+/
+DIV. ESCOLARIDADE  ==================================================================
+//
+//
+/
+*/
 .escolaridade i {z-index:2; position:absolute; left:-4.3%;top:-3.25%;  background: #fff; color:  #4a65e8; padding: 2.5% 0;}
 
-/*idiomas*/
+
+/*
+//
+//
+/
+DIV IDIOMAS ==================================================================
+//
+//
+/
+*/
 
 .idiomas { display: flex; flex-wrap: no-wrap; padding-top:2.5%;}
 .idiomas > div {flex:1;}
 .fa-flag-usa,.fa-flag {color:#ff4d4d; padding:  2.5% 0}
 
 
-/*== Conhecimentos e domínios de Linguagens ===*/
+
+/*
+//
+//
+/
+DIV CONHECIMENTO E DOMINIOS DE LINGUAGEM ==================================================================
+//
+//
+/
+*/
 
 .knowInfo > li {flex-direction: column;}
 .knowInfo > li p {padding: 2%;}
 .knowInfo:hover span { animation: move 2s 1.5s 1 linear; }
 
-/*Progress CSS BAR */
+/*
+Progress CSS BAR  ==================================================================
+*/
 
 .meter {	height: 30px;	width: 100%;	background: #CFCFCF;	border-radius: 30px;  color: #333; display: flex; }
 .meter > span { display: flex; height: 100%;  border-radius:30px; justify-content: center; align-items: center; align-content: center; }
@@ -104,16 +244,30 @@ section { background-color: #FFF;  color: #777777; }
 span.green {  background:  linear-gradient(to right,#00CABB, #6379EB); }
 @keyframes move { from { width:0%;}  to { width:;} } 
 
-
-
-/*== Experiencia ===*/
+/*
+//
+//
+/
+DIV EXPERIENCIAS PROFISSIONAIS ==================================================================
+//
+//
+/
+*/
 
 .descAtividades { text-align: justify; padding-top: 5%;}
 .fa-briefcase { z-index:2; position:absolute; left:-4.3%;top:-3.25%;  background: #fff; color:#4C8CE0; padding:  2.5% 0;}
 
 
 
-/* cursos e treinamentos*/
+/*
+//
+//
+/
+DIV CURSOS, WORKSHOPS E TREINAMENTOS ==================================================================
+//
+//
+/
+*/
 .tp-curso {margin-bottom: 3.5%;}
 .atv i { z-index:2; position:absolute; left:-4.3%;  background: #fff; margin-top:1.25%; padding:  2.5% 0;}
 .atv {padding: 2.5%; width: 100%; align-content: center;}
@@ -125,7 +279,16 @@ span.green {  background:  linear-gradient(to right,#00CABB, #6379EB); }
 .atv >li { display: flex;}
 
 
-/* listas complementares*/
+
+/*
+//
+//
+/
+LISTAS DE DOMINIOS, INTERESSES, COMPLEMENTARES, CONHECIMENTOS E DOMINIOS (GRADIENTES) ==================================================================
+//
+//
+/
+*/
 .lista-comp li{ 
 min-width:100%; 
 color: #FFF; 
@@ -166,7 +329,16 @@ line-height: 90%;
 	background: linear-gradient(45deg, #00e6b8, #00CABB);
 }
 
-/* =================================flutuante ======================================*/
+
+/*
+//
+//
+/
+MENU FLUTUANTE ==================================================================
+//
+//
+/
+*/
 
 #menuflutuante {
 	position: fixed;
@@ -223,10 +395,16 @@ line-height: 90%;
 	width: 100%;
 }
 
+/*
+//
+//
+/
+BARRA DE ROLAGEM ==================================================================
+//
+//
+/
+*/
 
-
-
-/* ============= scrollbar ============== */
 ::-webkit-scrollbar-track { 
 box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
 background-color: #F5F5F5; 
@@ -250,8 +428,78 @@ transparent
 );
 }
 
+/*
+//
+//
+/
+/*
+==========================================================
+========================================================== 
+====================== MEDIA QUERIES =====================
+==========================================================
+==========================================================
 
 
+
+
+DISPOSITIVO MINIMO WIDTH 320 PX ==================================================================
+//
+//
+/
+*/
+
+@media screen and (min-width: 320px){
+	header .box {
+		flex-flow: column nowrap;
+	}
+	header:before, header:after {
+		width: calc(50% - 15.2px);
+	}
+		span.abrev {
+		display: none;
+	}
+}
+
+/* DISPOSITIVO MINIMO WIDTH 425 PX ==================================================================
+//
+//
+/
+*/
+@media screen and (min-width: 425px){
+	header .box {
+		flex-flow: row nowrap;
+	}
+		header:before, header:after {
+		width: calc(50% - 15px);
+	}
+	.nome h2 {
+		font-size: 1.5rem;
+	}
+
+}
+
+/* DISPOSITIVO MINIMO WIDTH 768 PX ==================================================================
+//
+*/
+@media screen and (min-width: 768px){
+	header .user-img {  width: 180px; height: 180px;
+
+	}
+	.nome h2 {
+		font-size: 1.7rem;
+	}
+
+}
+
+/*
+//
+//
+/
+DISPOSITIVO MINIMO WIDTH 998 PX ==================================================================
+//
+//
+/
+*/
 @media screen and (min-width: 998px){
 
 	body { width: 90%; margin: 0 5%;
@@ -266,6 +514,15 @@ transparent
 	}
 
 }
+/*
+//
+//
+/
+DISPOSITIVO MINIMO WIDTH 1024 PX ==================================================================
+//
+//
+/
+*/
 @media screen and (min-width: 1024px){
 
 	body { width:80%; margin: 0 10%;
@@ -283,6 +540,15 @@ transparent
 
 
 }
+/*
+//
+//
+/
+DISPOSITIVO MINIMO WIDTH 1280 PX ==================================================================
+//
+//
+/
+*/
 @media screen and (min-width: 1280px){
 	body {
 		width:60%; margin: 0 20%;
