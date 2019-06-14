@@ -79,7 +79,7 @@ header:before, header:after
 
 
   height:20px;
-  box-shadow:0 15px 5px 5px rgba(0,0,0, 0.6);
+  box-shadow:0 15px 5px 5px rgba(0,0,0, 0.7);
 
   bottom:10px;
   left:10px;
@@ -603,3 +603,4 @@ DISPOSITIVO MINIMO WIDTH 1280 PX ===============================================
 	.lista-comp li { min-width: 20%; margin: .5%; 
 	}
 }
+
