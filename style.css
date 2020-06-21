@@ -37,6 +37,10 @@ ul {
 .under {
 	text-decoration: underline;
 }
+a:hover, span:hover, i:hover {
+	color: #FFFFF5;
+}
+
 
 /*================================================================================= containers principais  */
 
