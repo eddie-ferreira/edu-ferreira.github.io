@@ -113,7 +113,7 @@ header .picture {padding-right: 2%; flex: 1 2 auto; }
 header .user-img { 
  width: 116px; height: 116.63px; border-radius: 50%;
  background-image:  
- url("portrait.png");
+ url("portrait.jpg");
  box-shadow: inset 5px 5px 15px 8px rgba(0,0,0,0.8);
  background-size: cover; align-self: center;
 }

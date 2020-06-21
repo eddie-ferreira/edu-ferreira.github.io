@@ -1,16 +1,16 @@
-
+/*================================================================================= Default config  */
 *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-family: 'Muli', sans-serif;
 	color: inherit;
+	color: rgba(255,255,255,.5);
 }
 
 
 h1 {
-	font-size: 3rem;
-
+	font-size: 4rem;
 }
 
 img {
@@ -29,104 +29,99 @@ ul {
 .col {
 	flex-direction: column;
 }
-
-
-
-body,html, header, .slide {
-	width: 100%;
-}
-
-header{
-	position: relative;
-
-}
-
-header .cabecalho {
-	position: absolute;
-	top: 20%;
-	align-self: center;
-	color: rgba(255,255,255,.6);
-	background: rgba(0,0,0,0.3);
-	padding: 2%;
-	z-index: 2;
-	border-radius: 35px;
-	text-align: center;
-}
-
-
-
-header .menu-triangules {
-	position: absolute;
-	bottom:0;
-	z-index: 3;
-	width: 100%;
-}
-.slide  {
-	position: relative; 
-	flex-flow: column wrap; 
-
-	background: #1a1a1a;
-}
-.slide-item {
-	align-items: center;
+.center {
 	justify-content: center;
+	align-items: center;
 	align-content: center;
-	align-self: center;
+}
+.under {
+	text-decoration: underline;
+}
+
+/*================================================================================= containers principais  */
+
+
+body {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100vh;
+	justify-content: flex-start;
+	background: #1a1a1a;
+	overflow-x: hidden;
+}
+header,section, footer {
+	width: 100vw;
+	align-self: flex-start;
 
 }
-.slide:before {
-	content: "";
+header{
+	background: red;
+	flex-flow: row wrap;
+	
+
+}
+
+section {
+	height: 100vh;
+	padding-top: 15%;
 	position: absolute;
 	top:0;
-	left: 0;
-	z-index: 1;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to bottom, #ff4d4d, rgba(0,0,0,0.3) 45%);
+	z-index: 2;
+	background-image:linear-gradient(to bottom,rgba(255, 25, 25, 0.664), rgba(255,255,255,.5));
+	
 }
 
+/*================================================================================= Default config  */
 
-.slide-item:nth-child(1),
-.slide-item:nth-child(2),		
-.slide-item:nth-child(4){ display: none;}
+/*================================================================================= Menu Nav  */
+#myNav {
+	position: fixed;
+	top: -2px;
 
+}
 
-.hambNav {            
-	font-size:4rem;
+.hambNav,.closeBtn  {            
+	font-size:5rem;
 	cursor:pointer;
 	position: fixed;
 	top:10px;
 	right: 25px;
-	z-index: 3;
+	z-index: 5;
 	color: rgba(255,255,255,.5);
+	transition: 1s;
+
+}
+.closeBtn {
+	display: none;
 
 }
 .overlay {
-	height: 100%;
+	display: flex;
+	flex-flow: row nowrap;
 	width: 0;
+	height: 120px;
 	position: fixed;
 	z-index: 4;
 	top: 0;
 	left: 0;
-	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.00);
 	overflow-x: hidden;
 	transition: 0.5s;
+	font-size: 2.3rem;
+	padding: 15px 0;
 }
 
 .overlay-content {
-	position: relative;
-	top: 25%;
-	width: 100%;
+	display: flex;
+	justify-content: space-around;
 	text-align: center;
-	margin-top: 30px;
+	flex:1;
 }
 
 .overlay a {
 	padding: 8px;
 	text-decoration: none;
-	font-size: 36px;
-	color: #818181;
-	display: block;
+	color: #f2f2f2;
 	transition: 0.3s;
 }
 
@@ -134,136 +129,66 @@ header .menu-triangules {
 	color: #f1f1f1;
 }
 
-.overlay .closebtn {
-	font-size:6rem;
-	cursor:pointer;
-	position: absolute;
-	top:10px;
-	right: 25px;
-	color: rgba(255,255,255,.5);
+/*================================================================================= Menu Nav  */
+
+/*================================================================================= Banner  */
+
+
+
+.banner  {
+	position: relative;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	background-color: aqua;
+	background-image: url("banner2.jpg");
+	background-size: cover;
 
 }
-.under {
-	text-decoration: underline;
-}
 
-.social, footer, body{
-	background: #1a1a1a;
-	color: rgba(255,255,255,.5);
-}
+
+/*================================================================================= Banner  */
+
+/*================================================================================= Redes Sociais  */
+
+
 .social {
+	padding: 50px;
+	width: 100%;
 	flex-flow: row wrap;
 	justify-content: space-around;
+	align-self: flex-end;
 	align-items: center;
 	justify-content: center;
 	align-content: center;
 }
 .social-net {
-	margin: 10px;
-	font-size: 2rem;
+	font-size: 4em;
+	margin: 20px;
 	color: rgba(255,255,255,.5);
 
 }
-footer p {
+/*================================================================================= Redes Sociais  */
+
+/*================================================================================= Rodapé  */
+
+footer {
+	align-self: flex-end;
+}
+.copyright {
+	padding: 20px 0;
 	text-align: center;
 	font-size: .9rem;
 	font-weight: 300;
+	align-self: flex-end;
 
 }
+/*================================================================================= Rodapé  */
 
-@media screen and (min-width: 760px){
-	.slide {
-		flex-flow: row nowrap;
-	}
-	.slide-item{
-		flex:1;
-	}
-	.slide-item:nth-child(2) {
-		display: flex;
-		flex:1;
-
-	}
-
-	.menu-triangules {
-		position: absolute;
-		bottom: -50px;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		width: 100%;
-		height: 100%;
-	}
-	.menu-triangules > div {
-
-		flex: 1;
-		margin-top: 25%;
-		background-repeat: no-repeat;
-		background-size: contain;
-	}
-	.triangules_1 {
-		background: url("triangules.svg");
-	}
-	.triangules_2{
-		transform: rotate(180deg);
-		background: url("triangules_2.svg");
-	}
-	.triangules_3 {                 
-		display: none;
-	}
-
-}
-
-@media screen and (min-width: 1250px) {
-
-	.slide-item:nth-child(4) {
-		display: flex;
-	}
-
-	header .cabecalho {
-		margin-top: 15%;
-		top: 40%;
-		bottom: 0;
-		width: 100%;
-		background-color: #1a1a1a;
-		left: 0;
-		right: 0;
-		border-radius: 0;
-	}
-	.menuPC {
-		display: flex;
-		height: 90px;
-		background-color: rgba(0,0,0,0);
-		overflow: hidden;
-
-	}
-	.overlay-content {
-		width: 100%;
-		display: flex;
-		flex-flow: row nowrap;
-		padding: 0;
-		top:0;
-
-	}
-	.overlay-content > a {
-		display: flex;
-		text-align: center;
-		align-content: center;
-		align-items: center;
-		justify-content: center;
-		flex:1;
-		color: #fff;
-
-	}
-
-	.overlay .closebtn {
-		position: relative;
-		z-index: 9;
-		top: -15px;
-		left: 10px;
-	}
-
-}
-
-/* ============= scrollbar ============== */
+/*================================================================================= Scrollbar  */
 ::-webkit-scrollbar-track { 
 box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
 background-color: #F5F5F5; 
@@ -286,3 +211,57 @@ transparent 75%,
 transparent
 );
 }
+/*================================================================================= Scrollbar  */
+
+/*================================================================================= Media Queries  */
+
+/*================================================================================= max-width 480px  */
+@media screen and (max-width: 480px) {
+	h1 {
+		font-size: 3em;
+	}
+	h3 {
+		font-size: 1.2em;
+	}
+body {
+	font-size: 1rem;
+}
+
+section {
+	text-align: center;
+	padding:2.5%;
+}
+
+
+
+.hambNav,.closeBtn {
+	font-size: 3.5em;
+}
+.closeBtn {
+	background-color: rgba(0,0,0,1);
+	text-align: center;
+	border-radius: 0 50% 50% 0 ;
+	padding: 5px;
+	width: 90px;
+	height: 90px;
+
+}
+.overlay, .overlay-content {
+	height: 100vh;
+	width: 100vw;
+	flex-flow: column wrap;
+	background-color: rgba(0,0,0,1);
+}
+
+.social {
+	padding: 0;
+	padding-top: 70px;
+}
+.social-net {
+	font-size: 2.3em;
+	padding: 0;
+}
+
+
+}
+/*================================================================================= max-width 375px  */
