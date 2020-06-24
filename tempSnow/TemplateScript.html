@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="template-style.css">
+   <script src="script.js"></script>
+
+
+</head>
+
+<body>
+   <nav>
+      <div>
+         <button type="submit" onclick="showInput();">
+            <i class="fa fa-file fa-2x"></i></button>
+         <button type="submit" onclick="showInputHtml();">
+            <i class="fa fa-code fa-2x"></i>
+         </button>
+         <button onclick="clearData();">
+            <i class="fa fa-trash fa-2x"></i>
+         </button>
+      </div>
+   </nav> 
+   
+
+      <form id="myForm" autocomplete="off">
+ 
+         <ul>
+            <li class="userInfo">
+               <label for="request">Request for: </label>
+               <input type="text" name="message" id="request">
+            </li>
+            <li class="userInfo">
+               <label for="userId">Employee ID: </label>
+               <input type="text" name="message" id="userId">
+            </li>
+            <li class="userInfo">
+               <label for="cbn">CBN: </label>
+               <input type="text" name="message" id="cbn" value="+">
+            </li>
+            <li class="userInfo">
+               <label for="location">Location: </label>
+               <input type="text" name="message" id="location">
+               <label for="timezone" style="padding-left: 25px;">Timezone: </label>
+               <input type="text" name="message" id="timezone" value="UTC -">
+            </li>
+            <li class="userInfo">
+               <label for="bttr">BTTR: </label>
+               <input type="text" name="message" id="bttr" value="am">
+               <label for="toTime" style="padding-left: 25px;">to:</label>
+               <input type="text" name="toTime" id="toTime" value="pm">
+            </li>
+         </ul>
+         <div>
+            <label for="issue"><span>Issue :</span><br></label>
+            <textarea name="issue" id="issue" cols="110" rows="2">
+- User requested assistance to 
+            </textarea>
+         </div>
+         <div>
+            <label for="troubleshooting"><span>Troubleshooting:</span><br></label>
+            <textarea name="troubleshooting" id="troubleshooting" cols="110" rows="7">
+- 
+- User has been instructed that the updates will be sent by e-mail, teams, call and/or SNOW tickets.
+- No further assistance was requested by the user.
+   
+            </textarea>
+         </div>
+         <div>
+           <label for="resolution"><span>Resolution:</span><br></label> 
+            <textarea name="resolution" id="resolution" cols="110" rows="6">
+-
+- All above TS was made by SD.
+- Ticket Routed to the XXXXXXXXXXXXXXXXXXXX Team.
+- Once done, instructed to return it directly to us for improve de SLA.
+            </textarea>
+         </div>
+   
+      </form>
+
+
+   <section>
+      <div class="displayText">
+         <div style="position: relative;">
+            <span class="closeBtn" onclick="closeDisplayText();"><i class="fa fa-times-circle fa-2x"></i></span>
+            <span class="copyBtn" onclick="selectText();"><i class="fa fa-check-circle fa-2x"></i></span>
+            <h1 style="text-align: center;">Texto Gerado:</h1>
+            <textarea name="displayText" id="display" cols="20" rows="15"
+               style=" white-space: pre-wrap; height: 500px; "></textarea>
+         </div>
+
+      </div>
+      <div class="displayHtml">
+         <div style="position: relative;">
+            <span class="closeBtn" onclick="closeDisplayHtml();"><i class="fa fa-times-circle fa-2x"></i></span>
+            <span class="copyBtn" onclick="selectTextHtml();"><i class="fa fa-check-circle fa-2x"></i></span>
+            <h1 style="text-align: center;">Texto Html Gerado:</h1>
+            <textarea name="displayHtml" id="displayHtml" cols="20" rows="15"
+               style="white-space: pre-wrap; height: 500px; "></textarea>
+         </div>
+      </div>
+   </section>
+</body>
+
+</html>
