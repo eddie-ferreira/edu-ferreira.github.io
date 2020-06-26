@@ -1,104 +1,148 @@
 /*================================================================================= Default config  */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Muli', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	color: inherit;
-	color: rgba(255,255,255,.5);
 }
 
-
 h1 {
-	font-size: 4rem;
+	font-size: 5rem;
 }
 
 img {
 	max-width: 100%;
-
 }
+
 ul {
 	list-style: none;
 }
+
 .flex {
 	display: flex;
 }
+
 .row {
 	flex-direction: row;
 }
+
 .col {
 	flex-direction: column;
 }
+
 .center {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
 }
+
 .under {
 	text-decoration: underline;
 }
-a:hover, span:hover, i:hover {
-	color: #FFFFF5;
+
+
+i:hover {
+	font-weight: 700;
 }
 
-
 /*================================================================================= containers principais  */
-
 
 body {
 	display: flex;
 	flex-flow: column nowrap;
 	min-height: 100vh;
+	width: 100vw;
 	justify-content: flex-start;
-	background: #1a1a1a;
 	overflow-x: hidden;
+
+	background: linear-gradient(-45deg, #00CABB, #4a65e8);
 }
-header,section, footer {
+
+header, section, footer {
 	width: 100vw;
 	align-self: flex-start;
-
 }
-header{
-	background: red;
-	flex-flow: row wrap;
-	
 
+header {
+	flex-flow: row wrap;
+	height: 50vh;
+	z-index: 2;
 }
 
 section {
-	height: 100vh;
-	padding-top: 15%;
+	color: #000;
+	background-color: #FFF;
+	height: 50vh;
+	position: relative;
+	text-align: center;
+	margin-bottom: -50vh;
+
+}
+
+section::before {
 	position: absolute;
-	top:0;
-	z-index: 2;
-	background-image:linear-gradient(to bottom,rgba(255, 25, 25, 0.664), rgba(255,255,255,.5));
-	
+	top: -150px;
+	left: 0;
+	content: "";
+	width: 100vw;
+	height: 400px;
+	background-image: url('https://drive.google.com/uc?id=1y_NC3u7iyHa50IRmDBpJOc9psvEuaj4u');
+	background-size: cover;
+	z-index: 1;
+}
+section::after {
+	position: absolute;
+	bottom: -150px;
+	left: 0;
+	content: "";
+	width: 100vw;
+	height: 450px;
+	background-image: url('https://drive.google.com/uc?id=1y_NC3u7iyHa50IRmDBpJOc9psvEuaj4u');
+	background-size: cover;
+	z-index: 1;
+}
+.img-footer  {
+	width: 70vw;
+	z-index: 3;
+	position: absolute;
+	bottom: -280px;
+	left: 5px;
+}
+
+
+.cabecalho, .social {
+	z-index: 3;
 }
 
 /*================================================================================= Default config  */
 
 /*================================================================================= Menu Nav  */
+
 #myNav {
 	position: fixed;
 	top: -2px;
-
+	width: calc(100vw - 90px);
+	opacity: 0;
+	transition: all 1s ease-in-out;
 }
 
-.hambNav,.closeBtn  {            
-	font-size:5rem;
-	cursor:pointer;
+.hambNav, .closeBtn {
+	font-size: 3.5rem;
+	cursor: pointer;
 	position: fixed;
-	top:10px;
+	top: 25px;
 	right: 25px;
 	z-index: 5;
-	color: rgba(255,255,255,.5);
+	color: rgba(255, 255, 255, .8);
 	transition: 1s;
-
 }
+
 .closeBtn {
 	display: none;
-
 }
+
 .overlay {
 	display: flex;
 	flex-flow: row nowrap;
@@ -108,10 +152,10 @@ section {
 	z-index: 4;
 	top: 0;
 	left: 0;
-	background-color: rgba(0,0,0,0.00);
+	background-color: rgba(0, 0, 0, 0.00);
 	overflow-x: hidden;
 	transition: 0.5s;
-	font-size: 2.3rem;
+	font-size: 1.7rem;
 	padding: 15px 0;
 }
 
@@ -119,14 +163,17 @@ section {
 	display: flex;
 	justify-content: space-around;
 	text-align: center;
-	flex:1;
+	flex: 1;
 }
 
 .overlay a {
-	padding: 8px;
+	padding: 15px;
 	text-decoration: none;
-	color: #f2f2f2;
-	transition: 0.3s;
+	color:rgba(255, 255, 255, 0.5);
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 22px;	
+	transition: 0.7s ease-out;
+	width: 250px;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -137,9 +184,9 @@ section {
 
 /*================================================================================= Banner  */
 
-
-
-.banner  {
+.banner {
+	padding-top: 120px;
+	padding-right: 30px;
 	position: relative;
 	flex-wrap: wrap;
 	width: 100%;
@@ -147,17 +194,11 @@ section {
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-	background-color: aqua;
-	background-image: url("banner2.jpg");
-	background-size: cover;
-
 }
-
 
 /*================================================================================= Banner  */
 
 /*================================================================================= Redes Sociais  */
-
 
 .social {
 	padding: 50px;
@@ -169,57 +210,59 @@ section {
 	justify-content: center;
 	align-content: center;
 }
+
 .social-net {
 	font-size: 4em;
 	margin: 20px;
-	color: rgba(255,255,255,.5);
-
+	color: rgba(0,0,0,0.8);
 }
+
 /*================================================================================= Redes Sociais  */
 
 /*================================================================================= Rodapé  */
 
 footer {
 	align-self: flex-end;
+	position: fixed;
+	height: 40vh;
+	bottom: 0;
+	z-index: -1;
 }
+
 .copyright {
 	padding: 20px 0;
 	text-align: center;
 	font-size: .9rem;
 	font-weight: 300;
 	align-self: flex-end;
-
 }
+
 /*================================================================================= Rodapé  */
 
 /*================================================================================= Scrollbar  */
-::-webkit-scrollbar-track { 
-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
-background-color: #F5F5F5; 
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar { 
-width: 12px; 
-background-color: #F5F5F5; 
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
 }
-::-webkit-scrollbar-thumb { 
-background-color: #333; 
-border-radius: 5px;  
-background-image: 
-linear-gradient(
-45deg, rgba(255,255,255, 0.2) 25%,
-transparent 25%, transparent 50%, 
-rgba(255,255,255, 0.2) 50%, 
-rgba(255,255,255, 0.2) 75%, 
-transparent 75%,  
-transparent
-);
+
+::-webkit-scrollbar-thumb {
+	background-color: #333;
+	border-radius: 5px;
+	background-image: linear-gradient( 45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
 }
+
 /*================================================================================= Scrollbar  */
 
 /*================================================================================= Media Queries  */
 
 /*================================================================================= max-width 480px  */
+
 @media screen and (max-width: 480px) {
 	h1 {
 		font-size: 3em;
@@ -227,45 +270,35 @@ transparent
 	h3 {
 		font-size: 1.2em;
 	}
-body {
-	font-size: 1rem;
+	body {
+		font-size: 1rem;
+	}
+
+	.hambNav, .closeBtn {
+		font-size: 2rem;
+	}
+	.closeBtn {
+		background-color: rgba(0, 0, 0, 1);
+		text-align: center;
+		border-radius: 0 50% 50% 0;
+		padding: 5px;
+		width: 90px;
+		height: 90px;
+	}
+	.overlay, .overlay-content {
+		height: 100vh;
+		width: 100vw;
+		flex-flow: column wrap;
+		background-color: rgba(0, 0, 0, 1);
+	}
+	.social {
+		padding: 0;
+		padding-top: 70px;
+	}
+	.social-net {
+		font-size: 2.3em;
+		padding: 0;
+	}
 }
 
-section {
-	text-align: center;
-	padding:2.5%;
-}
-
-
-
-.hambNav,.closeBtn {
-	font-size: 3.5em;
-}
-.closeBtn {
-	background-color: rgba(0,0,0,1);
-	text-align: center;
-	border-radius: 0 50% 50% 0 ;
-	padding: 5px;
-	width: 90px;
-	height: 90px;
-
-}
-.overlay, .overlay-content {
-	height: 100vh;
-	width: 100vw;
-	flex-flow: column wrap;
-	background-color: rgba(0,0,0,1);
-}
-
-.social {
-	padding: 0;
-	padding-top: 70px;
-}
-.social-net {
-	font-size: 2.3em;
-	padding: 0;
-}
-
-
-}
 /*================================================================================= max-width 375px  */

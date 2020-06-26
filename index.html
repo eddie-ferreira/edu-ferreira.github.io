@@ -10,7 +10,6 @@
 		<meta name="keywords" content="HTML,CSS,JavaScript, Portfolio, Personal Page">
 		<meta name="author" content="Ferreira, Eduardo">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link href="https://fonts.googleapis.com/css?family=Muli:300,400,700" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
 		<link rel="stylesheet" href="style.css">
 		<link rel="mask-icon" href="favicon.png">
@@ -32,20 +31,22 @@
 		<span class="closeBtn" id="closeBtn" onclick="closeNav()"><i class="fas fa-times"></i></span>
 
 
-		<div class="banner flex center"></div>
+		<div class="banner flex center">
+			<img src="vector-art.png" alt="art banner">		
+		</div>
 			
 	</header>
 
 	<section class="flex col center">
 		<div class="cabecalho flex col center">
 			<h1>
-				Olá, eu sou o Eduardo!
+				Olá! eu sou o Eduardo.
 			</h1>
 			<h3>
 				Clique no <span class="under">menu de hamburguer</span> para navegar e saber mais a meu respeito.
 			</h3>
-			<h3>
-				Pode ficar à vontade para se comunicar comigo através destas redes socias abaixo!
+			<h3 style="text-align: justify;">
+				Você também pode falar comigo através destas redes socias abaixo!
 			</h3>
 		</div>
 
@@ -78,22 +79,26 @@
 				</a>
 			</li>
 		</ul>
+		<div class="img-footer">
+			<img src="vector-art-footer.png" alt="">
+		</div>
+
 
 	</section>
 	<footer class="flex center">
-		<p class="flex copyright">Eduardo Jose Ferreira, 2019 &copy; direitos de imagem</p>
+		<p class="flex copyright">Eduardo Jose Ferreira, 2020 &copy; direitos de imagem</p>
 	</footer>
 
 
 	<script>
 		function openNav() {
-			document.getElementById("myNav").style.width = "calc(100% - 90px)";
+			document.getElementById("myNav").style.opacity = "1";
 			document.getElementById("hambNav").style.display = "none";
 			document.getElementById("closeBtn").style.display = "block";
 		}
 
 		function closeNav() {
-			document.getElementById("myNav").style.width = "0%";
+			document.getElementById("myNav").style.opacity = "0";
 			document.getElementById("closeBtn").style.display = "none";
 			document.getElementById("hambNav").style.display = "block";
 		}
