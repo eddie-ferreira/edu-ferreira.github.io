@@ -115,7 +115,8 @@ body {
       z-index: -1;
       background: rgba(60, 60, 60, 0.8); }
 
-img, svg {
+img,
+svg {
   max-width: 100%; }
 
 h1,
@@ -174,6 +175,11 @@ main {
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
+    .about-info .bio p {
+      text-align: left;
+      font-size: 1.2rem;
+      margin-block-start: 0.2em;
+      margin-block-end: 0.2em; }
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job-2 {
