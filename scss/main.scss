@@ -1,0 +1,192 @@
+@import "config";
+@import "menu";
+
+@import url("https://fonts.googleapis.com/css2?family=Manjari&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  @include backgroud;
+  background: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Manjari", sans-serif;
+  line-height: 1.5;
+}
+// IMGS
+
+img, svg {
+  max-width: 100%;
+}
+
+// Headings
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+  &.lg-heading {
+    font-size: 6rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+.text-secundary {
+  color: $secundary-color;
+}
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 68px);
+
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secundary-color;
+        @include easeOut();
+      }
+    }
+  }
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    border-radius: 50%;
+    margin: auto;
+    border: $secundary-color 3px solid;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+
+  }
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+  .job-3 {
+    grid-area: job3;
+  }
+  .job {
+    background: lighten($primary-color, 5);
+    padding: 0.5rem;
+    border-bottom: $secundary-color 5px solid;
+  }
+}
+
+//Work/Projects
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px #fff solid;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $secundary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Contact Page
+
+
+.boxes {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  padding:30px;
+  font-size: 1.5rem;
+  i {
+    font-size: 1.2em;
+    padding-right: 8px;
+  }
+  
+    .wpp {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      flex-direction: column;
+      img {
+        width: 310px;
+      }
+    }
+  
+
+}
+
+
+// Button Style
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3;
+
+  &:hover {
+    background: $secundary-color;
+    color: set-text-color($secundary-color);
+  }
+}
+.btn-dark {
+  @extend .btn;
+  background: darken($primary-color, 50);
+  color: #fff;
+}
+.btn-light {
+  @extend .btn;
+  background: lighten($primary-color, 50);
+  color: #333;
+}
+
+#main-footer {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+@import "mobile";
