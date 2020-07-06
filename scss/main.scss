@@ -17,7 +17,8 @@ body {
 }
 // IMGS
 
-img, svg {
+img,
+svg {
   max-width: 100%;
 }
 
@@ -89,6 +90,12 @@ main {
     grid-area: bio;
     font-size: 1.5rem;
 
+    p {
+      text-align: left;
+      font-size: 1.2rem;
+      margin-block-start: 0.2em;
+      margin-block-end: 0.2em;
+      }
   }
   .job-1 {
     grid-area: job1;
@@ -126,7 +133,6 @@ main {
 
 // Contact Page
 
-
 .boxes {
   display: flex;
   flex-direction: column;
@@ -134,27 +140,24 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: 1rem;
-  padding:30px;
+  padding: 30px;
   font-size: 1.5rem;
   i {
     font-size: 1.2em;
     padding-right: 8px;
   }
-  
-    .wpp {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto;
-      flex-direction: column;
-      img {
-        width: 310px;
-      }
+
+  .wpp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    img {
+      width: 310px;
     }
-  
-
+  }
 }
-
 
 // Button Style
 
